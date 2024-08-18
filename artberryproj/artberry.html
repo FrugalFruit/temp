@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Artberry</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/47192485da.js" crossorigin="anonymous"></script>
+        <style>
+            html{
+                background-color: 	#F9F6EE;
+                font-family: Raleway,sans-serif;
+                scroll-behavior: smooth;
+                font-size: 1.15em;
+                
+            }
+            body{ margin: 0; padding: 0px;}
+            #topbar{
+                background-color: #FFF;
+                height: 100px;
+                width: 100%;
+                border-bottom: 1px solid black;
+                display:flex;
+                position: fixed;
+                top:0px;
+                right: 0px;
+                left:0px;
+                z-index: 1;
+                
+            }
+            h1{
+                font-size: 4em;
+                
+            }
+            #menu{ display: flex; align-items: flex-start;}
+            #menu li:hover{text-decoration: underline;text-underline-offset: 8px;text-decoration-thickness: 1px;}
+            #navbar li{font-size: 1.5em;text-align: center;width: 150px;height: 50px;line-height: 50px;}
+            #navbar{margin-top: 25px;margin-right: 8%;margin-left: auto;}
+            #logo{width: autos;height: 60px;margin-top: 20px; margin-left: 8%;}
+            #navbar ul{list-style: none; margin: 0px;padding: 0px; }
+            #navbar a{text-decoration: none; color: black;}
+
+            #AboutUs{
+                
+                margin-left: 10%;
+                margin-right: 15%;
+                height: 440px;
+                display: flex;
+                position: relative;
+                
+                
+            }
+
+            #cell11{
+                bottom: 0px;
+                width: 500px;
+                
+            }
+
+            #cell12{
+                
+                width: 500px;
+                margin-left: auto;
+	            bottom: 0px;
+                
+                
+            }
+            #vid{
+                margin-top: 50px;
+                width: 100%;
+                height: 500px;
+                background-color: #41b075;
+                overflow: hidden;
+               
+            }
+            #field{
+                width: 100%;
+                height: auto;  
+                position: relative;
+                bottom: 300px;
+                
+            }
+            #blueberry{
+                margin-left: 0;
+                margin-right: 0%;
+                display: flex;
+                
+            }
+            #blueberry >div{
+                
+                margin-top: 95px;
+                margin-left: 5%;
+                margin-right: 5%;
+                
+            }
+            #p3{height: auto ; width: 30%; margin-top: 150px; padding-left: 5%;}
+            table{
+                border: 1px solid lightgray;
+                border-collapse: collapse;
+                
+              
+                margin-top: 10%;
+                background-color: 	#F9F6EE;
+                text-align: center;
+            }
+            tr>th{ border: 1px solid lightgray; border-left: 1px solid #F9F6EE;} 
+            td{width: 5%;border: 1px solid lightgray;border-left: 1px solid #F9F6EE;}
+            
+            #secondrow > td{width: 5%;text-align: center;border:1px solid lightgray;} #secondrow{height: auto;}
+            
+            #june{background-color: #009949;}
+            #july{background-color: #6cb743;}
+            #august{background-color: #9dc73c;}
+            #september{background-color: #e7792b;}
+            #o1{background-color: #009949;} #o2{background-color: #00a765;} #o3{background-color: #41b075;} #o4{background-color: #61b984;}
+            #o5{background-color: #6cb743;} #o6{background-color: #9cc862;} #o7{background-color: #b4d372;} #o8{background-color: #cedd83;} 
+            #o9{background-color: #9dc73c;} #o10{background-color: #cedd83;} #o11{background-color: #e7e870;} #o12{background-color: #fff585;} 
+            #o13{background-color: #e7792b;} #o14{background-color: #efa04f;} #o15{background-color: #f4b463;} #o16{background-color: #f8ca79;}
+            
+            .mark{width: 100%;height: auto; opacity: 0; transition: all ease-in-out 1s;}
+            #name{
+                text-align: left; font-size: 1em; font-weight: bold; width: 8%; border-top:1px solid#F9F6EE;
+            }
+            #cert{display: flex;margin-top: 50%;margin-left: 32%;}
+            #gap, #grasp {width: auto;height: 100px;padding: 20px;}
+            #smeta{width: auto;height: 50px;padding: 20px;padding-top: 30px;}
+
+            #cherrytxt{
+                margin-left: 10%;
+                margin-right: 50%;
+            }
+
+            #cherry{
+                padding-top: 5%;
+            }
+            #next{
+                height: 30%;
+                background-color: #41b075;
+            }
+           
+            #contact{
+                padding-top: 5%;
+                padding: 5px;
+                height: 600px;
+                width: 1300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #nums{font-family: Roboto sans-serif;}
+            #loc{
+                height: auto;
+                width: 600px;
+                float: right;
+                margin-top: 250px;
+                transition: all 1s ease-in-out;
+                z-index: 2;
+                border-radius: 15px;
+                margin-left: 100px;
+            }
+            #loc:hover{
+                transform: scale(2.7) translateX(-135px) translateY(40px);
+            }
+            a{text-decoration: none; color: black;}
+            #con{margin-top: 100px;border-radius: 15px;  color: black;background-color: #F9F6EE; width: 600px;padding: 10px; padding-top: 0; height: 330px;text-align: center;}
+            .material-symbols-outlined{
+                position: relative; top: 5px;
+            }
+            hr{border-top: 1px solid #000;}
+            #b1,#b2{
+                display: flex;
+                margin-top: 10%;
+            }
+            #b11{
+                width: 40%; height: auto;
+                padding-left: 10%; padding-right: 10%;
+            }
+            #b1txt{
+                margin-left: 10%;
+                
+            }
+            #b2txt{margin-right: 10%;}
+            #b22{
+                width: 40%; height: auto;
+                padding-right: 10%;
+                padding-left: 10%;
+            }
+            #ld{margin-top: 30%; margin-left: 35%}
+            #navleft{padding-right: 15px;}
+            #gallery{ margin-left: 10%; margin-right: 10%; padding-top: 5%;}
+            #f3{display: flex; margin-top: 3%} #x1{height: auto; width: 80%; margin-bottom: 3%; position: relative; left: -100%; transition: all 2s ease; }
+            #x2{width: 100%; height: auto;position: relative; left: -100%; transition: all 1.5s ease; }#x3{width: 100%; height: auto; position: relative; right: -200%; transition: all 1.5s ease; } #d1{ width: 63%;}#d2{width: 35%; margin-left: 3%;}
+            #f2{display: flex; margin-top: 2%;} #d3{width: 47%; margin-right: 3%;} #d4{width: 50%;} #x4{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x5{width: 100%; height: auto;position: relative; right: -200%; transition: all 1.5s ease;}
+            #f22{display: flex;} #d5{width: 47%; margin-right: 3%;} #d6{width: 50%; margin-top: 3%;}#x6{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x7{width: 100%; height: auto;position: relative; right: -200%; transition: all 1.5s ease;}
+            #f23{display: flex; margin-top: 2%;} #d7{width: 50%; margin-right: 3%;} #d8{width: 47%;} #x8{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x9{width: 100%; height: auto;position: relative; right: -200%; transition: all 1.5s ease;}
+            #f24{display: flex; margin-top: 2%;} #d9{width: 53%; margin-right: 3%;} #d10{width: 44%; position: relative; } #x10{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x11{width: 100%; height: auto; position: absolute; bottom: 0;position: relative; right: -200%; transition: all 1.5s ease;}
+        </style>
+    </head>
+    <body>
+        <div id="topbar">
+            <img id="logo" src="img/logoo.png" alt="logo">
+            <!--<img id="logo" src="img/logo.jpg" alt="logo">-->
+            <div id="navbar">
+                <ul id="menu">
+                    <li id="navleft"><a href="artberry.html#AboutUs">About Us</a></li>
+                    <li><a href="artberry.html#blueberry">Blueberry</a></li>
+                    <li><a href="artberry.html#cherry">Cherry</a></li>
+                    <li><a href="artberry.html#gallery">Gallery</a></li>
+                    <li><a href="artberry.html#contact">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="AboutUs">
+            <div id="cell11">
+                <br><br><br><br>
+                <h1 id="about"><strong>ABOUT US</strong></h1>
+                <p>
+                    Artberry is a team of professionals. We started in 2014. Today we have 150 hectares in Ukraine filled with orchards and berry fields.
+                    Each berry varieties we grow are selected for their premium flavor, size and harvest timing to create a seamless 
+                    supply of top quality berries from Ukraine. We have Global G.A.P, GRASP, SMETA audit certification and are a SEDEX member.
+                    
+                </p>
+            </div>
+            <div id="cell12">
+                <div id="cert">
+                    <img id="gap" src="img/ggap.webp" alt="Global Gap">
+                    <img id="grasp" src="img/GRASP.png" alt="GRASP">
+                    <img id="smeta" src="img/SMETA .webp" alt="SMETA">
+                </div>
+            </div>
+        </div>
+        <div id="vid">
+            <video id="field" loop autoplay muted>
+                <source src="img/fields.MOV">
+            </video>
+        </div>
+        <div id="blueberry">
+            <img id="p3" src="img/moustacheman.jpg" alt="moustacheman">
+            <div>
+                <h1>BLUEBERRY</h1>
+                <p id="btext">
+                    Our main product is blueberries, and we are glad to offer you such famous varieties of blueberries as Duke, Draper, Liberty and Aurora. 
+                    The average size of one berry is 1,4 - 1,9 cm, the average weight is 1,5 - 1,7 g.
+                    These varieties provide fruiting from June to October. Storage in special conditions allows
+                    to extend the term of fresh berries until December. 
+                </p>
+                
+                <table>
+                    <tr>
+                        <th id="name" rowspan="2">&nbsp;</th>
+                        <th id="june" colspan="4">June</th>
+                        <th id="july" colspan="4">July</th>
+                        <th id="august" colspan="4">August</th>
+                        <th id="september" colspan="4">September</th>
+                    </tr>
+                    
+
+                    <tr id="secondrow">    
+                        <td id="o1">1</td><td id="o2">2</td><td id="o3">3</td><td id="o4">4</td>
+                        <td id="o5">1</td><td id="o6">2</td><td id="o7">3</td><td id="o8">4</td>
+                        <td id="o9">1</td><td id="o10">2</td><td id="o11">3</td><td id="o12">4</td>
+                        <td id="o13">1</td><td id="o14">2</td><td id="o15">3</td><td id="o16">4</td>     
+                    </tr>
+
+                    <tr>
+                        <td id="name">Duke</td><td> &nbsp; </td><td> &nbsp; </td><td> <img class="mark" src="img/mark.png" alt="berry"> </td><td><img class="mark" src="img/mark.png" alt="berry"> </td>
+                        <td><img class="mark" src="img/mark.png" alt="berry"></td><td> <img class="mark" src="img/mark.png" alt="berry"></td><td> &nbsp; </td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td> <td> &nbsp; </td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                    </tr>
+
+                    <tr>
+                        <td id="name">Draper</td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                        <td> <img class="mark" src="img/mark.png" alt="berry"></td><td> <img class="mark" src="img/mark.png" alt="berry"></td><td> <img class="mark" src="img/mark.png" alt="berry"></td><td> <img class="mark" src="img/mark.png" alt="berry"></td>
+                        <td> &nbsp; </td><td> &nbsp; </td> <td> &nbsp; </td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                    </tr>
+
+                    <tr>
+                        <td id="name">Liberty</td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> <img class="mark" src="img/mark.png" alt="berry"></td>
+                        <td> <img class="mark" src="img/mark.png" alt="berry"></td><td> <img class="mark" src="img/mark.png" alt="berry"> </td> <td> <img class="mark" src="img/mark.png" alt="berry"></td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td id="name">Aurora</td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td><td> &nbsp; </td>
+                        <td> &nbsp; </td><td> &nbsp; </td> <td> <img class="mark" src="img/mark.png" alt="berry"> </td><td> <img class="mark" src="img/mark.png" alt="berry"> </td>
+                        <td><img class="mark" src="img/mark.png" alt="berry"></td><td><img class="mark" src="img/mark.png" alt="berry"></td><td> <img class="mark" src="img/mark.png" alt="berry"></td><td> &nbsp; </td>
+                    </tr>
+                    
+                </table>
+            </div>
+            
+        </div>
+        <div id="b1">
+            <div id="b1txt">
+                <h3>Planting Material from Fall Creek</h3>
+                All planting material is purchased directly from Fall Creek, a US-based nursery with a keen focus on blueberry genetics, plants and grower support delivered to the world's premier blueberry growers.
+                <ul>
+                    <li>High quality plants, perfectly adapted to climate conditions at grower's location</li>
+                    <br>
+                    <li>High fruit yield</li>
+                    <br>
+                    <li>Exceptional fruit quality and taste</li>
+                    <br>
+                    <li>Technical support at every stage</li>
+                    <br>
+                    <li>Annual online and offline training</li>
+                    <br>
+                    <li>Continuous breeding program with new varieties for future farm expansion</li>
+                </ul>  
+                
+            </div>
+            <img id="b11" src="img/DSCF8844.JPG">
+        </div>
+    
+        <div id="b2">
+            <img id="b22" src="img/DSCF8289_2.JPG">
+            <div id="b2txt">
+                <h3>Growing process:</h3>
+                
+                <ul>
+                    <li>Open ground</li>
+                    <br>
+                    <li>Availability from June to September</li>
+                    <br>
+                    <li>Advanced technical approach</li>
+                    <br>
+                    <li>Absence of GMOs, additives and preservatives,
+                         chemical treatment after harvest.</li>
+               
+                </ul>  
+                
+            </div>
+            
+        </div>
+ 
+        <div id="cherry">
+            <div id="cherrytxt">
+                <h1>Cherry</h1>
+                <p>Kennel Fleuren B.V. nusery (Holland) provided 
+                    us with planting material for cultivation of our cherries, 
+                    as well as technology of cultivation, harvesting and storage
+                    nursery specialists accompany and monitor compliance with the technological requirements
+                    for growing berries throughout the year, making necessary adjustments to the structure of
+                    the work for maximum fruiting. Implemented technologies eliminate the use of chemicals banned 
+                    in the EU. Similar requirements apply to the water for drip irrigation.
+                </p>
+                
+            </div>
+            <div id="vid">
+                <video id="field" loop autoplay muted>
+                    <source src="img/41.mov">
+                </video>
+            </div>
+            
+            
+        </div>
+        <div id="gallery">
+            <h1>GALLERY</h1>
+            <div id="f3">
+                <div id="d1">
+                    <img id="x1" src="img/cherry2.JPG">
+                    <img id="x2" src="img/IMG_9484.JPG">
+                </div>
+                <div id="d2">
+                    <img id="x3" src="img/IMG_6812.JPG">
+                </div>
+                
+            </div>
+            <div id="f2">
+                <div id="d3">
+                    <img id="x4" src="img/DSCF8492.jpg">
+                    
+                </div>
+                <div id="d4">
+                    <img id="x5" src="img/IMG_3511.jpg">
+                </div>
+            </div>
+            <div id="f22">
+                <div id="d5">
+                    <img id="x6" src="img/IMG_0894.jpg">
+                    
+                </div>
+                <div id="d6">
+                    <img id="x7" src="img/IMG_9361.jpg">
+                </div>
+            </div>
+            <div id="f23">
+                <div id="d7">
+                    <img id="x8" src="img/IMG_0643.jpg">
+                    
+                </div>
+                <div id="d8">
+                    <img id="x9" src="img/IMG_0628.jpg">
+                </div>
+                
+            </div>
+            <div id="f24">
+                <div id="d9">
+                    <img id="x10" src="img/IMG_7725.JPG">
+                    
+                </div>
+                <div id="d10">
+                    <img id="x11" src="img/Photoroom_20240313_171030.JPG">
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            
+            <video id="loc" loop autoplay muted>
+                <source src="img/infomap.mp4">
+            </video>
+            
+            <div id="con">
+                <h1>Contacts</h1>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://www.google.com/maps/place/Artberry/@50.4159165,29.588086,15.07z/data=!4m10!1m2!2m1!1sartberry
+                    !3m6!1s0x472b6970426dd89d:0x831a9486a9d9ff59!8m2!3d50.4166715!4d29.6064846!15sCghhcnRiZXJyeZIBEGNvcnBvcmF0ZV9vZm
+                    ZpY2XgAQA!16s%2Fg%2F11hz2lwvx4?entry=ttu" target="_blank">Vulytsya Shevchenka, 13-b, Nebelytsya, Kyiv Oblast, Ukraine, <a id="nums">08024</a>
+                    </a>
+                <p>
+                    <hr>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:marketing@artberry.com.ua">marketing@artberry.com.ua</a>
+                </p>
+                <hr>
+                <p>
+                    <p>Marketing Department:</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a id="nums">+38 093 3553231</a>
+                </p>
+                <hr>
+                <p>
+                    
+                    <p>Hiring Department:</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <a id="nums">+38 068 6068282</a><br>
+                    <i class="fa-solid fa-phone"></i>
+                    <a id="nums">+38 095 5117229</a>
+                </p>
+                <hr>
+                <p>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <a href="https://www.instagram.com/artberry.ua" target="_blank">Artberry Instagram</a>
+                </p>
+                <hr>
+                <p>
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/people/Artberry-UA/pfbid02dvh51BDXsPxCKeBmTz3XoVNFe5zofhLMZDUV53gwmFuZLLpvRMFJd5BbTDdFh2w9l/" target="_blank">Artberry Facebook</a>
+                </p>
+                
+            </div>
+            <div id="ld">
+                <img id="logo" src="img/logoo.png" alt="logo">
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 4000 ){
+                    $('#x1').css('left', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 4000 ){
+                    $('#x2').css('left', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 4100 ){
+                    $('#x3').css('right', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 4700 ){
+                    $('#x4').css('left', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 4700 ){
+                    $('#x5').css('right', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 5300 ){
+                    $('#x6').css('left', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 5300 ){
+                    $('#x7').css('right', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 5500 ){
+                    $('#x8').css('left', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 5500 ){
+                    $('#x9').css('right', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 5900 ){
+                    $('#x10').css('left', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 5900 ){
+                    $('#x11').css('right', '0');
+                }
+            });
+            $(document).scroll( function() {
+                var top = $(this).scrollTop();
+                if(top > 800){
+                    $('.mark').css('opacity', '1');
+                }
+            });
+           
+
+        </script>
+        
+    </body>
+</html>
