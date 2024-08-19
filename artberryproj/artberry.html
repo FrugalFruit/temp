@@ -68,7 +68,7 @@
                 margin-top: 50px;
                 width: 100%;
                 height: 500px;
-                background-color: #41b075;
+            
                 overflow: hidden;
                
             }
@@ -169,29 +169,48 @@
                 display: flex;
                 margin-top: 10%;
             }
-            #b11{
-                width: 40%; height: auto;
-                padding-left: 10%; padding-right: 10%;
-            }
+        
             #b1txt{
                 margin-left: 10%;
+                margin-right: 10%;
+                width: 40%;
                 
             }
-            #b2txt{margin-right: 10%;}
+            #b2txt{margin-right: 10%;} #b11{width: 100%; height: auto; padding-top: 5%;}
+            #bn{width: 40%;  margin-right: 10%; }
             #b22{
-                width: 40%; height: auto;
+                width: 40%; 
                 padding-right: 10%;
                 padding-left: 10%;
+                
             }
             #ld{margin-top: 30%; margin-left: 35%}
             #navleft{padding-right: 15px;}
             #gallery{ margin-left: 10%; margin-right: 10%; padding-top: 5%;}
-            #f3{display: flex; margin-top: 3%} #x1{height: auto; width: 80%; margin-bottom: 3%; position: relative; left: -100%; transition: all 2s ease; }
-            #x2{width: 100%; height: auto;position: relative; left: -100%; transition: all 1.5s ease; }#x3{width: 100%; height: auto; position: relative; right: -200%; transition: all 1.5s ease; } #d1{ width: 63%;}#d2{width: 35%; margin-left: 3%;}
-            #f2{display: flex; margin-top: 2%;} #d3{width: 47%; margin-right: 3%;} #d4{width: 50%;} #x4{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x5{width: 100%; height: auto;position: relative; right: -200%; transition: all 1.5s ease;}
-            #f22{display: flex;} #d5{width: 47%; margin-right: 3%;} #d6{width: 50%; margin-top: 3%;}#x6{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x7{width: 100%; height: auto;position: relative; right: -200%; transition: all 1.5s ease;}
-            #f23{display: flex; margin-top: 2%;} #d7{width: 50%; margin-right: 3%;} #d8{width: 47%;} #x8{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x9{width: 100%; height: auto;position: relative; right: -200%; transition: all 1.5s ease;}
-            #f24{display: flex; margin-top: 2%;} #d9{width: 53%; margin-right: 3%;} #d10{width: 44%; position: relative; } #x10{width: 100%; height: auto;position: relative; left: -200%; transition: all 1.5s ease;} #x11{width: 100%; height: auto; position: absolute; bottom: 0;position: relative; right: -200%; transition: all 1.5s ease;}
+            #f3{display: flex; margin-top: 3%} #x1{height: auto; width: 80%; margin-bottom: 3%; }
+            #x2{width: 100%; height: auto;}#x3{width: 100%; height: auto; } #d1{ width: 63%;}#d2{width: 35%; margin-left: 3%;}
+            #f2{display: flex; margin-top: 2%;} #d3{width: 47%; margin-right: 3%;} #d4{width: 50%;} #x4{width: 100%; height: auto;} #x5{width: 100%; height: auto;}
+            #f22{display: flex;} #d5{width: 47%; margin-right: 3%;} #d6{width: 50%; margin-top: 3%;}#x6{width: 100%; height: auto;} #x7{width: 100%; height: auto;}
+            #f23{display: flex; margin-top: 2%;} #d7{width: 50%; margin-right: 3%;} #d8{width: 47%;} #x8{width: 100%; height: auto;} #x9{width: 100%; height: auto;}
+            #f24{display: flex; margin-top: 2%;} #d9{width: 53%; margin-right: 3%;} #d10{width: 44%; position: relative; } #x10{width: 100%; height: auto;} #x11{width: 100%; height: auto;}
+            .animate-left {
+                position: relative;
+                left: -70%; /* Start off-screen */
+                transition: left 3s ease;
+                
+            }
+            .animate-right {
+                position: relative;
+                left: 100%; /* Start off-screen */
+                transition: left 3s ease;
+                
+            }
+            .visible {
+                left: 0;
+                right: 0; /* Move into view */
+                
+            }
+
         </style>
     </head>
     <body>
@@ -310,7 +329,10 @@
                 </ul>  
                 
             </div>
-            <img id="b11" src="img/DSCF8844.JPG">
+            <div id="bn">
+                <img id="b11" src="img/DSCF8844.JPG">
+            </div>
+            
         </div>
     
         <div id="b2">
@@ -359,49 +381,49 @@
             <h1>GALLERY</h1>
             <div id="f3">
                 <div id="d1">
-                    <img id="x1" src="img/cherry2.JPG">
-                    <img id="x2" src="img/IMG_9484.JPG">
+                    <img id="x1" class="animate-left" src="img/cherry2.JPG">
+                    <img id="x2" class="animate-left" src="img/IMG_9484.JPG">
                 </div>
                 <div id="d2">
-                    <img id="x3" src="img/IMG_6812.JPG">
+                    <img id="x3" class="animate-right" src="img/IMG_6812.JPG">
                 </div>
                 
             </div>
             <div id="f2">
                 <div id="d3">
-                    <img id="x4" src="img/DSCF8492.jpg">
+                    <img id="x4" class="animate-left" src="img/DSCF8492.jpg">
                     
                 </div>
                 <div id="d4">
-                    <img id="x5" src="img/IMG_3511.jpg">
+                    <img id="x5" class="animate-right" src="img/IMG_3511.jpg">
                 </div>
             </div>
             <div id="f22">
                 <div id="d5">
-                    <img id="x6" src="img/IMG_0894.jpg">
+                    <img id="x6" class="animate-left" src="img/IMG_0894.jpg">
                     
                 </div>
                 <div id="d6">
-                    <img id="x7" src="img/IMG_9361.jpg">
+                    <img id="x7" class="animate-right" src="img/IMG_9361.jpg">
                 </div>
             </div>
             <div id="f23">
                 <div id="d7">
-                    <img id="x8" src="img/IMG_0643.jpg">
+                    <img id="x8" class="animate-left" src="img/IMG_0643.jpg">
                     
                 </div>
                 <div id="d8">
-                    <img id="x9" src="img/IMG_0628.jpg">
+                    <img id="x9" class="animate-right" src="img/IMG_0628.jpg">
                 </div>
                 
             </div>
             <div id="f24">
                 <div id="d9">
-                    <img id="x10" src="img/IMG_7725.JPG">
+                    <img id="x10" class="animate-left" src="img/IMG_7725.JPG">
                     
                 </div>
                 <div id="d10">
-                    <img id="x11" src="img/Photoroom_20240313_171030.JPG">
+                    <img id="x11" class="animate-right" src="img/Photoroom_20240313_171030.JPG">
                 </div>
             </div>
         </div>
@@ -458,72 +480,7 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 4000 ){
-                    $('#x1').css('left', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 4000 ){
-                    $('#x2').css('left', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 4100 ){
-                    $('#x3').css('right', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 4700 ){
-                    $('#x4').css('left', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 4700 ){
-                    $('#x5').css('right', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 5300 ){
-                    $('#x6').css('left', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 5300 ){
-                    $('#x7').css('right', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 5500 ){
-                    $('#x8').css('left', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 5500 ){
-                    $('#x9').css('right', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 5900 ){
-                    $('#x10').css('left', '0');
-                }
-            });
-            $(document).scroll( function() {
-                var top = $(this).scrollTop();
-                if(top > 5900 ){
-                    $('#x11').css('right', '0');
-                }
-            });
+  
             $(document).scroll( function() {
                 var top = $(this).scrollTop();
                 if(top > 800){
@@ -531,6 +488,30 @@
                 }
             });
            
+            document.addEventListener("DOMContentLoaded", function() {
+                const elements = document.querySelectorAll('.animate-left, .animate-right');
+
+                const observerOptions = {
+                    root: null, // Use the viewport as the root
+                    rootMargin: '0px',
+                    threshold: 0.0 // Adjust this based on when you want the animation to trigger
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            entry.target.classList.remove('visible');
+                        }
+                    });
+                }, observerOptions);
+
+                elements.forEach(element => {
+                    observer.observe(element);
+                });
+            });
+
 
         </script>
         
