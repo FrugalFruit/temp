@@ -11,7 +11,7 @@
                 font-family: Raleway,sans-serif;
                 scroll-behavior: smooth;
                 font-size: 1.15em;
-                max-width: 100%; /* Ensure it doesn't exceed the viewport */
+            
                 margin: 0 auto;
             }
             body{ margin: 0; padding: 0px; overflow-x: hidden;}
@@ -141,30 +141,28 @@
             #contact{
                 padding-top: 5%;
                 padding: 5px;
-                height: 600px;
-                width: 1300px;
+                height: 900px;
                 margin-left: auto;
                 margin-right: auto;
             }
             #nums{font-family: Roboto sans-serif;}
             #loc{
                 height: auto;
-                width: 600px;
+                width: 35%;
                 float: right;
                 margin-top: 250px;
                 transition: all 1s ease-in-out;
                 z-index: 2;
                 border-radius: 15px;
-                margin-left: 100px;
+                margin-left: 10%;
+                margin-right: 10%;
             }
             #loc:hover{
                 transform: scale(2.7) translateX(-135px) translateY(40px);
             }
             a{text-decoration: none; color: black;}
-            #con{margin-top: 100px;border-radius: 15px;  color: black;background-color: #F9F6EE; width: 600px;padding: 10px; padding-top: 0; height: 330px;text-align: center;}
-            .material-symbols-outlined{
-                position: relative; top: 5px;
-            }
+            #con{margin-top: 100px;border-radius: 15px;  color: black;background-color: #F9F6EE; width: 35%; height: 70%;text-align: center;margin-left: 10%; margin-right: 10%;}
+           
             hr{border-top: 1px solid #000;}
             #b1,#b2{
                 display: flex;
@@ -187,7 +185,7 @@
             }
             #ld{margin-top: 30%; margin-left: 35%}
             #navleft{padding-right: 15px;}
-            #gallery{ margin-left: 10%; margin-right: 10%; padding-top: 5%;}
+            #gallery{ margin-left: 10%; margin-right: 10%; padding-top: 5%; max-width: 100%;overflow: hidden;} 
             #f3{display: flex; margin-top: 3%} #x1{height: auto; width: 80%; margin-bottom: 3%; }
             #x2{width: 100%; height: auto;}#x3{width: 100%; height: auto; } #d1{ width: 63%;}#d2{width: 35%; margin-left: 3%;}
             #f2{display: flex; margin-top: 2%;} #d3{width: 47%; margin-right: 3%;} #d4{width: 50%;} #x4{width: 100%; height: auto;} #x5{width: 100%; height: auto;}
@@ -204,6 +202,7 @@
                 position: relative;
                 left: 100%; /* Start off-screen */
                 transition: left 3s ease;
+                
                 
             }
             .visible {
@@ -430,7 +429,9 @@
         </div>
         <div id="contact">
             
-           
+            <video id="loc" loop autoplay muted>
+                <source src="img/infomap.mp4">
+            </video>
             
             <div id="con">
                 <h1>Contacts</h1>
